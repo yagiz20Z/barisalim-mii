@@ -3,6 +3,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
   margin: 0;
   background: #ffecec;
@@ -10,12 +11,20 @@ body {
 
 .container {
   text-align: center;
+  max-width: 600px;
+  padding: 2rem;
 }
 
 h1 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: #333;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 button {
@@ -25,7 +34,7 @@ button {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform 0.3s ease;
 }
 
 #yesBtn {
@@ -36,4 +45,29 @@ button {
 #noBtn {
   background-color: #f44336;
   color: white;
+}
+
+/* Özür mesajları */
+#apologyContainer {
+  margin-top: 2rem;
+}
+
+.apology {
+  color: #cc0000;
+  font-weight: bold;
+  animation: fadein 0.5s ease-in;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+/* Fade-in animasyonu */
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
